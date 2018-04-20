@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+      var worker = new Worker('worker.js');
+
+      var value = [1,2,3];
+
+      worker.onmessage = function(event) {
+        console.log(event.data.value);
+        value = event.data.value;
+      };
+
+      function start() {
+        console.log('start.....');
+        worker.postMessage(value);
+      }
+  </script>
+</head>
+<body>
+<button id="'btn" onClick="start();">Start</button>
+</body>
+</html>
