@@ -1,6 +1,6 @@
 {
-  "name": "ztreeAutoPublishTest",
-  "version": "0.0.1",
+  "name": "ztree-auto-publish-test",
+  "version": "0.0.2",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
