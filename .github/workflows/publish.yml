@@ -24,7 +24,6 @@ jobs:
         node-version: 10
         registry-url: https://registry.npmjs.org/
     - run: npm i
-    - run: npm run build
-    - run: npm publish # 如果发布之前需要构建，可添加prepublishOnly的生命周期脚本
+    - run: npm publish 
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_TEST}} # 上面在Github Secrets中设置的密钥
