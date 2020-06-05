@@ -1,6 +1,6 @@
 {
   "name": "ztree-auto-publish-test",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "jsdelivr": "dist/libs/ZtreeAutoPublishTest.js",
   "main": "dist/libs/ZtreeAutoPublishTest.js",
   "devDependencies": {
@@ -35,5 +35,11 @@
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "git push --follow-tags",
     "prepublishOnly": "npm run build"
-  }
+  },
+  "files": [
+	  "dist",
+		"CHANGELOG.md",
+    "package.json",
+    "README.md"
+	]
 }
