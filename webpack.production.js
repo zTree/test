@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: 'production',
   plugins: [
     new CleanWebpackPlugin([libsDist], {
-      root: path.resolve(__dirname, '../../'),
+      root: path.resolve(__dirname, './'),
       verbose: true,
       dry: false
     }),
@@ -33,7 +33,7 @@ module.exports = merge(common, {
   // },
   output: {
     filename: 'libs/[name].[chunkhash].js',
-    path: path.resolve(__dirname, `../../${libsDist}`),
+    path: path.resolve(__dirname, `./${libsDist}`),
     globalObject: 'this'
   }
 });
