@@ -1,6 +1,6 @@
 {
   "name": "ztree-auto-publish-test",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "jsdelivr": "dist/libs/ZtreeAutoPublishTest.js",
   "main": "dist/libs/ZtreeAutoPublishTest.js",
   "devDependencies": {
