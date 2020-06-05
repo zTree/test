@@ -1,6 +1,8 @@
 {
   "name": "ztree-auto-publish-test",
   "version": "0.0.4",
+  "jsdelivr": "dist/libs/ZtreeAutoPublishTest.js",
+  "main": "dist/libs/ZtreeAutoPublishTest.js",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/polyfill": "^7.2.5",
@@ -31,6 +33,7 @@
     "dev": "cross-env NODE_ENV=development&&webpack --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production&&webpack --config webpack.production.js",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "npm run build"
   }
 }
