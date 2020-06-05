@@ -1,8 +1,9 @@
 {
   "name": "ztree-auto-publish-test",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "devDependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -20,18 +21,16 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1",
-    "worker-loader": "^2.0.0"
+    "worker-loader": "^2.0.0",
+    "seedrandom": "^3.0.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "seedrandom": "^3.0.1"
   },
   "scripts": {
     "watch": "cross-env NODE_ENV=development&&webpack --watch --config webpack.dev.js",
     "dev": "cross-env NODE_ENV=development&&webpack --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production&&webpack --config webpack.production.js",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "postversion": "git push --follow-tags",
-    "prepublishOnly": "npm run build"
+    "postversion": "git push --follow-tags"
   }
 }
